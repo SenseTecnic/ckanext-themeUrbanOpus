@@ -86,7 +86,10 @@
     <div class="content">
 
       {% block header_site_navigation %}
-        <nav class="section navigation">
+        <nav class="section navigation" style="
+            position: absolute;
+            top: 10px;
+            right: 0;">
           <ul class="nav nav-pills">
             <li><a href="{{ h.smartstreets_base_url() }}">Home</a></li>
             <li><a href="{{ h.smartstreets_base_url() }}/about">About</a></li>
