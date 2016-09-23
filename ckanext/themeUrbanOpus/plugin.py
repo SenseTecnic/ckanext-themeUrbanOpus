@@ -9,10 +9,13 @@ from ckan.plugins import implements, SingletonPlugin
 from ckan.plugins import IConfigurer
 from ckan.plugins import IGenshiStreamFilter
 from ckan.plugins import IRoutes
+from ckan.plugins import ITemplateHelpers
 
 log = getLogger(__name__)
 
 
+def url_for(c, a, i):
+    return '#'
 
 class UrbanOpusThemePlugin(SingletonPlugin):
     """This plugin demonstrates how a theme packaged as a CKAN
@@ -31,6 +34,7 @@ class UrbanOpusThemePlugin(SingletonPlugin):
     """
     implements(IConfigurer, inherit=True)
     implements(IRoutes, inherit=True)
+    implements(ITemplateHelpers)
 
     def update_config(self, config):
         """This IConfigurer implementation causes CKAN to look in the
@@ -62,4 +66,15 @@ class UrbanOpusThemePlugin(SingletonPlugin):
         config['ckan.site_title'] = "Urban Opus Datahub"
         # set the customised package form (see ``setup.py`` for entry point)
         config['package_form'] = "example_form"
+
+
+    def get_helpers(self):
+        '''Register the most_popular_groups() function above as a template
+        helper function.
+
+        '''
+        # Template helper function names should begin with the name of the
+        # extension they belong to, to avoid clashing with functions from
+        # other extensions.
+        return {}
 
