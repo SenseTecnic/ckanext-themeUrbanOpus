@@ -3,7 +3,19 @@ body {
 	font-family: 'Open Sans';
 }
 
-.alert, .table {
+[role=main], .main {
+	background: #eee;
+}
+
+a {
+	color: #0e56d3;
+}
+
+a:hover {
+	cursor: pointer;
+}
+
+.alert, .table, .btn, input[type="text"] {
 	border-radius: 0;
 }
 
@@ -11,8 +23,72 @@ body {
 	background: #333333;
 }
 
+a.tag {
+	border-radius: 0;
+	border-color: #0e56d3;
+	color: #0e56d3;
+}
+
+a.tag:hover {
+	background-color: #0e56d3;
+	border-color: #0e56d3;
+	color: #fff;
+	box-shadow: none;
+}
+
+.btn-primary { 
+  color: #FFFFFF; 
+  background: #4CC262; 
+  border-color: transparent; 
+} 
+ 
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary:active, 
+.btn-primary.active, 
+.open .dropdown-toggle.btn-primary { 
+  color: #FFFFFF; 
+  background: #319043; 
+  border-color: transparent; 
+} 
+ 
+.btn-primary:active, 
+.btn-primary.active, 
+.open .dropdown-toggle.btn-primary { 
+  background-image: none; 
+} 
+ 
+.btn-primary.disabled, 
+.btn-primary[disabled], 
+fieldset[disabled] .btn-primary, 
+.btn-primary.disabled:hover, 
+.btn-primary[disabled]:hover, 
+fieldset[disabled] .btn-primary:hover, 
+.btn-primary.disabled:focus, 
+.btn-primary[disabled]:focus, 
+fieldset[disabled] .btn-primary:focus, 
+.btn-primary.disabled:active, 
+.btn-primary[disabled]:active, 
+fieldset[disabled] .btn-primary:active, 
+.btn-primary.disabled.active, 
+.btn-primary[disabled].active, 
+fieldset[disabled] .btn-primary.active { 
+  background: #4CC262; 
+  border-color: transparent; 
+} 
+ 
+.btn-primary .badge { 
+  color: #4CC262; 
+  background: #FFFFFF; 
+}
+
+.pill {
+	background-color: #02a7e1;
+}
+
 .masthead {
 	background: #f2f2f2;
+	padding: 15px 0 0 0;
 }
 
 .masthead,.account-masthead  {
@@ -20,12 +96,135 @@ body {
 }
 
 .masthead a img {
-    max-height: 80px;
+    max-height: 90px;
 }
 
-.flash-messages {
-	/*position: absolute;*/
-	top: 10px;
-	z-index: 5;
+.masthead .nav>li>a, .masthead .nav>li>a:focus, .masthead .nav>li>a:hover, .masthead .nav>.active>a, .masthead .nav>.active>a:hover, .masthead .nav>.active>a:focus {
 	border-radius: 0;
+	margin-left: 0;
+	margin-bottom: 0;
+	padding: 46px 15px;
+	margin-top: -25px;
+	color: #444;
+}
+
+.masthead .btn-navbar, .masthead .btn-navbar:hover, .masthead .btn-navbar:focus, .masthead .btn-navbar:active, .masthead .btn-navbar.active, .masthead .btn-navbar.disabled, .masthead .btn-navbar[disabled] {
+	background-color: #d26c1e;
+}
+
+.masthead .navigation .nav-pills li a:hover, .masthead .navigation .nav-pills li.active a {
+	background: rgba(255,255,255,0.6);
+	box-shadow: none;
+	border-radius: 0;
+}
+
+.masthead .navigation {
+	margin-right: 0;
+}
+
+.masthead .nav>li>a.uo-community-link {
+	font-weight: bold;
+	color: #61b23d;
+}
+
+.masthead .site-search {
+	padding: 12px 0;
+}
+
+.masthead input[type="text"] {
+	border-color: #999;
+}
+
+.account-masthead {
+	background-color: #e39739;
+}
+.account-masthead .account ul li {
+	border-color: #fff;
+}
+.account-masthead .account ul li a {
+	cursor: pointer;
+	color: #fff;
+	
+}
+.account-masthead .account ul li a:hover {
+	background-color: #d26c1e;
+}
+.account-masthead .account .notifications a span.badge {
+	background-color: #703910;
+}
+
+.nav-item.active>a, .nav-aside li.active a {
+	background-color: #02a7e1;
+}
+.nav-item.active>a:hover, .nav-aside li.active a:hover {
+	background-color: #187794;
+}
+.nav-item.active>a:before, .nav-aside li.active a:before {
+	background-color: transparent;
+	border-top: 17px solid transparent;
+	border-bottom: 17px solid transparent;
+	border-left: 10px solid #02a7e1;
+	width: 0;
+	height: 0;
+	right: -10px;
+	background-image: none;
+}
+
+.nav-item.active>a:hover:before, .nav-aside li.active a:hover:before {
+	border-left: 10px solid #187794;
+}
+
+
+/* home page 
+------------------------------------------------------------------------------*/
+
+.homepage .site-search {
+	display: none;
+}
+
+.homepage .hero {
+	background: url("/base/images/vancouver-aerial2.jpg");
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-top: 5px solid  #d26c1e;
+	border-bottom: 5px solid  #d26c1e;
+}
+
+.homepage .hero a.tag {
+	border-radius: 0;
+	background: transparent;
+	box-shadow: none;
+	color: #fff;
+	border-color: #fff;
+}
+.homepage .hero a.tag:hover {
+	background: transparent;
+	color: #ccc;
+	border-color: #ccc;
+}
+
+.homepage .module-search .search-giant input {
+	border-color: #f6f6f6;
+}
+
+.homepage .module-search .module-content {
+	background-color: #e39739;
+}
+
+.homepage .module-search .tags {
+	background-color: #703910;
+}
+
+.homepage .stats ul li {
+	width: 33%;
+}
+
+.homepage .stats ul li a {
+	color: #02a7e1;
+}
+
+.homepage [role=main] {
+	min-height: 250px;
+	padding: 40px 0;
 }
