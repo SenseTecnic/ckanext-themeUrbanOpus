@@ -14,16 +14,6 @@ from ckan.plugins import ITemplateHelpers
 log = getLogger(__name__)
 
 
-
-def smartstreets_base_url():
-    return 'http://hub.urbanopus.net'
-
-def logout_all_url():
-    return '#'
-
-def wotkit_url():
-    return 'http://hub.urbanopus.net/wotkit'
-
 def url_for(c, a, i):
     return '#'
 
@@ -86,10 +76,5 @@ class UrbanOpusThemePlugin(SingletonPlugin):
         # Template helper function names should begin with the name of the
         # extension they belong to, to avoid clashing with functions from
         # other extensions.
-        return {
-            'smartstreets_base_url': smartstreets_base_url,
-            'logout_all_url': logout_all_url,
-            'wotkit_url': wotkit_url
-            # 'url_for': url_for
-        }
+        return {}
 
