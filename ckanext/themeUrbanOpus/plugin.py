@@ -2,12 +2,9 @@ import os
 from logging import getLogger
 
 from pylons import request
-from genshi.input import HTML
-from genshi.filters.transform import Transformer
 
 from ckan.plugins import implements, SingletonPlugin
 from ckan.plugins import IConfigurer
-from ckan.plugins import IGenshiStreamFilter
 from ckan.plugins import IRoutes
 from ckan.plugins import ITemplateHelpers
 
